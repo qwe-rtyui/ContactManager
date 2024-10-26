@@ -1,14 +1,77 @@
 ﻿@page "/profile"
 @rendermode InteractiveServer
 <PageTitle>Profile</PageTitle>
-<button class="btn btn-success"></button>
-<h1>Perfil</h1>
+<div class="topH row ">
+    <div class="txt col-6">
+        <h1>Editar Perfil</h1>
+    </div>
+    <div class="texto col-6" style="text-align: right;">
+        <a href=""><ion-icon name="arrow-undo" style="color:lawngreen; font-size: 40px;"></ion-icon></a>
+    </div>
+</div>
+<div class="row edit-profile">
 
+    <div class="profile-image col-6">
+        <input type="file" @onchange="OnImageChange" accept="image/*" style="display: none;" id="fileInput" />
+        <img src="@profileImageUrl" alt="Profile Image" @onclick="TriggerFileInput" />
+    </div>
+
+    <div class="profile-details col-6">
+        <div class="form-group">
+            <label class="txt">Nome:</label>
+            <input type="text" class="form-control" @bind="UserProfile.Name" placeholder="Nome" />
+        </div>
+
+        <div class="form-group">
+            <label class="txt">Telefone:</label>
+            <input type="text" class="form-control" @bind="UserProfile.Phone" placeholder="Telefone" />
+        </div>
+
+        <div class="form-group">
+            <label class="txt">Email:</label>
+            <input type="email" class="form-control" @bind="UserProfile.Email" placeholder="Email" />
+        </div>
+
+        <button class="btn btn-primary" @onclick="SaveProfile">Salvar</button>
+    </div>
+</div>
 
 @code {
-    protected override async Task OnInitializedAsync()
-    {
+    private UserProfileModel UserProfile = new UserProfileModel();
+    private string profileImageUrl = "https://via.placeholder.com/150"; // URL da imagem padrão
 
+    // Método para carregar a imagem
+    private void OnImageChange(ChangeEventArgs e)
+    {
+        // var file = ((Microsoft.AspNetCore.Components.Forms.InputFileChangeEventArgs)e).File;
+        // if (file != null)
+        // {
+        //     // Lógica para salvar a imagem no servidor ou converter para URL local
+        //     // Neste exemplo, estamos apenas usando uma URL fixa para simplificar
+        //     profileImageUrl = "URL_DA_IMAGEM_CARREGADA"; // Substitua com a lógica correta
+        // }
     }
 
+    private void TriggerFileInput()
+    {
+        JS.InvokeVoidAsync("document.getElementById('fileInput').click()");
+    }
+
+    private void SaveProfile()
+    {
+        // Lógica para salvar o perfil do usuário
+        Console.WriteLine($"Salvando perfil de {UserProfile.Name}");
+    }
+
+    [Inject] private IJSRuntime JS { get; set; }
 }
+
+@code {
+    public class UserProfileModel
+    {
+        public string Name { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+    }
+}
+

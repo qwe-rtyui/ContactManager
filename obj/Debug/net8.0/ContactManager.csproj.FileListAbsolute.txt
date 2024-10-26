@@ -27,3 +27,8 @@ G:\Projetos\ContactManager\obj\Debug\net8.0\refint\ContactManager.dll
 G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.pdb
 G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.genruntimeconfig.cache
 G:\Projetos\ContactManager\obj\Debug\net8.0\ref\ContactManager.dll
+G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.sourcelink.json
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Pages\Profile.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\AlphabetMenu.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\ContactItem.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Pages\Home.razor.rz.scp.css
