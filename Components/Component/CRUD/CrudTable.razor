@@ -1,0 +1,93 @@
+﻿@typeparam ItemType
+<style>
+    .table-hover thead th:hover {
+        background-color: #21252973;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #212529;
+        vertical-align: top;
+        border-color: #dee2e6;
+        color: white;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #21252973;
+        color:white;
+    }
+</style>
+@if (headers != null && itemList != null)
+{
+    @if (itemList.Count > 0)
+    {
+        <div class="tab-content">
+            <div class="row table-modal-box" style="@styleheight;">
+                <div class="form-group col-md-12" style="position: unset">
+                    <div class="box-body no-padding" style="overflow-y:auto; overflow:hidden; overflow-x: auto;">
+                        <table class="table table-hover" style="overflow-y:scroll; border-top: hidden;">
+                            <thead>
+                                <tr>
+                                    @foreach (var header in headers)
+                                    {
+                                        <th style="cursor: pointer" @onclick="() => Order.InvokeAsync(header)">@header</th>
+                                    }
+                                    @for (int i = -1; i < columns - headers.Count; i++)
+                                    {
+                                        <th></th>
+                                    }
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in itemList)
+                                {
+                                    @itemRenderFragment(item)
+                                    ;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+    else
+    {
+        <CrudNoDataWarning />
+    }
+}
+else
+{
+    <CrudLoadingDataWarning />
+}
+
+
+@code {
+    [Parameter]
+    public int columns { get; set; }
+
+    [Parameter]
+    public List<string> headers { get; set; }
+
+    [Parameter]
+    public List<ItemType> itemList { get; set; }
+
+    [Parameter]
+    public RenderFragment<ItemType> itemRenderFragment { get; set; }
+
+    [Parameter]
+    public string filter { get; set; }
+
+    [Parameter]
+    public string styleheight { get; set; }
+
+    [Parameter]
+    public EventCallback<string> Order { get; set; }
+
+
+
+}

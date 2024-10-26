@@ -1,0 +1,132 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@using ContactManager.Services
+<style>
+    .topH {
+        margin: 20px;
+    }
+
+    .texto {
+        color: white;
+    }
+
+    .inpForm {
+        font-size: 20px;
+        background-color: transparent;
+        color: white;
+        border-radius: 10px;
+        height: 50px;
+    }
+
+    .formCrud {
+        height: 77vh;
+        overflow-y: scroll;
+        position: unset;
+        margin: 25px;
+    }
+        /* Adicionando um estilo de barra de rolagem mais discreta */
+        .formCrud::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .formCrud::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 4px;
+        }
+
+            .formCrud::-webkit-scrollbar-thumb:hover {
+                background-color: #555;
+            }
+</style>
+
+
+
+<PageTitle>Contact Manager</PageTitle>
+<div class="topH row ">
+    <div class="texto col-6">
+        <h1>Lista de contatos</h1>
+    </div>
+    <div class="texto col-6" style="text-align: right;">
+        <input class="inpForm" type="text" placeholder="🔎 Pesquisar" @bind-value="@filter" @bind-value:event="oninput" />
+    </div>
+</div>
+<div class="row" style="margin:10px;">
+    <AlphabetMenu></AlphabetMenu>
+    <div class="col-md-11 formCrud">
+        @if (Contacts != null)
+        {
+            <CrudTable columns="1" headers="@headers" itemList="@Contacts" styleheight="height: 58vh;">
+                <itemRenderFragment Context="item">
+                    @if (Show(item))
+                    {
+                        <ContactItem item="item" Remove="Remove" />
+                    }
+                </itemRenderFragment>
+            </CrudTable>
+        }
+    </div>
+</div>
+
+@code {
+    private List<string> headers;
+    private string filter = "";
+    private string filter2 = "";
+    protected override async Task OnInitializedAsync()
+    {
+        headers = new()
+        {
+            "Name",
+            "Phone",
+            "Email",
+            ""
+        };
+    }
+    private ContactSettings item;
+    private List<ContactSettings> Contacts = new List<ContactSettings>
+    {
+        new ContactSettings{Image = "Mikael", Name = "Mikael", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Trabalho"},
+        new ContactSettings{Image = "Camila", Name = "Camila", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Escola" },
+        new ContactSettings{Image = "Nami", Name = "Nami", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Colega" },
+        new ContactSettings{Image = "Sanji", Name = "Sanji", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Trabalho" },
+        new ContactSettings{Image = "Mikael", Name = "Mikael", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Trabalho"},
+        new ContactSettings{Image = "Camila", Name = "Camila", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Escola" },
+        new ContactSettings{Image = "Nami", Name = "Nami", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Colega" },
+        new ContactSettings{Image = "Sanji", Name = "Sanji", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Trabalho" },
+        new ContactSettings{Image = "Mikael", Name = "Mikael", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Trabalho"},
+        new ContactSettings{Image = "Camila", Name = "Camila", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Escola" },
+        new ContactSettings{Image = "Nami", Name = "Nami", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Colega" },
+        new ContactSettings{Image = "Sanji", Name = "Sanji", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Trabalho" },
+        new ContactSettings{Image = "Mikael", Name = "Mikael", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Trabalho"},
+        new ContactSettings{Image = "Camila", Name = "Camila", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Escola" },
+        new ContactSettings{Image = "Nami", Name = "Nami", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Colega" },
+        new ContactSettings{Image = "Sanji", Name = "Sanji", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Trabalho" },
+        new ContactSettings{Image = "Mikael", Name = "Mikael", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Trabalho"},
+        new ContactSettings{Image = "Camila", Name = "Camila", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Escola" },
+        new ContactSettings{Image = "Nami", Name = "Nami", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Colega" },
+        new ContactSettings{Image = "Sanji", Name = "Sanji", Phone = "(11) 5148-4123",Email="Teste@gmail.com", Description="Trabalho" }
+    };
+
+    private async Task Remove(ContactSettings _item)
+    {
+        item = _item;
+        CommitRemove(item);
+    }
+
+    private async Task CommitRemove(ContactSettings item)
+    {
+
+    }
+
+    private bool Show(ContactSettings item)
+    {
+        if (filter?.Length > 0)
+        {
+            string fields = $"{item.Name}";
+            return fields.ToLower().Contains(filter.ToLower());
+        }
+        else
+        {
+            return true;
+        }
+    }
+}

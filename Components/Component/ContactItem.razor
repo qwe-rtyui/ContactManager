@@ -1,0 +1,62 @@
+﻿@using ContactManager.Services
+@rendermode InteractiveServer
+<style>   
+    .name-cell {
+        display: flex;
+        align-items: center;
+    }
+
+        .name-cell img {
+            width: 50px;
+            height: 50px;
+            border-radius: 25%;
+            margin-right: 10px;
+        }
+
+    .name-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .name-info .name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .name-info .description {
+            font-size: 0.9em;
+            color: #666;
+        }
+    .item-center{
+        align-content: center;
+    }
+</style>
+<tr style="font-size:13px;">
+    <td>
+        <div class="name-cell">
+            <img src="/image/zoro.jpg" alt="Foto">
+            <div class="name-info">
+                <span class="name">@item.Name</span>
+                <span class="description">@item.Description</span>
+            </div>
+        </div>
+    </td>
+    <td class="item-center">@item.Phone</td>
+    <td class="item-center">@item.Email</td>
+    <td class="item-center" style="justify-items: right;">
+        <div class="float-right">
+            <a class="btn btn-sm btn-xs btn-danger" @onclick="@(() => Remove.InvokeAsync(item))">Excluir</a>
+
+        </div>
+    </td>
+</tr>
+
+@code {
+
+    [Parameter]
+    public ContactSettings item { get; set; }
+
+    [Parameter]
+    public EventCallback<ContactSettings> Remove { get; set; }
+
+}

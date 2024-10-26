@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\Projetos\\ContactManager\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ContactManager.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ContactManager.bundle.scp.css"
+    },
+    {
+      "Id": "G:\\Projetos\\ContactManager\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "G:\\Projetos\\ContactManager\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "G:\\Projetos\\ContactManager\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "G:\\Projetos\\ContactManager\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "G:\\Projetos\\ContactManager\\wwwroot\\image\\zoro.jpg",
+      "PackagePath": "staticwebassets\\image\\zoro.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ContactManager.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ContactManager.props",
+      "PackagePath": "build\\ContactManager.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ContactManager.props",
+      "PackagePath": "buildMultiTargeting\\ContactManager.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ContactManager.props",
+      "PackagePath": "buildTransitive\\ContactManager.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
