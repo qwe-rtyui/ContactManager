@@ -1,9 +1,29 @@
 ﻿@rendermode InteractiveServer
 
-<button class="cancel-btn" @onclick="() => ClosePopup.InvokeAsync()">Cancelar</button>
-<button class="save-btn">Salvar</button>
-
+@* <button class="cancel-btn" @onclick="() => ClosePopup.InvokeAsync()">Cancelar</button>
+<button class="save-btn">Salvar</button> *@
+@switch (TypePopup)
+{
+    case "listing":
+        <button class="cancel-btn" @onclick="() => ClosePopup.InvokeAsync()">Cancelar</button>
+        break;
+    case "Create":
+        <button class="cancel-btn" @onclick="() => ClosePopup.InvokeAsync()">Cancelar</button>
+        <button class="btn btn-success">Criar</button>
+        break;
+    case "Update":
+        <button class="cancel-btn" @onclick="() => ClosePopup.InvokeAsync()">Cancelar</button>
+        <button class="btn btn-success">Salvar</button>
+        break;
+    case "Delete":
+        <button class="cancel-btn" @onclick="() => ClosePopup.InvokeAsync()">Cancelar</button>
+        <button class="btn btn-danger">Remover</button>
+        break;
+}
 @code {
     [Parameter]
-    public EventCallback ClosePopup { get; set; }
+    public EventCallback ClosePopup { get; set; }       
+
+    [Parameter]
+    public string TypePopup { get; set; }
 }

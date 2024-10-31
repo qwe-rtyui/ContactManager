@@ -34,19 +34,18 @@
 @switch (formState)
 {
     case AgentFormState.ListingAndPoppingAdd:
-        <CrudPopup ItemType="ContactSettings">
-            <HeaderRenderFragment Context="item">
-                <CrudPopupHeader Title="Adicionar contato" ClosePopup="ClosePopup" />
-            </HeaderRenderFragment>
+        <CrudPopup ItemType="string" Title="Adicionar contato" ClosePopup="ClosePopup" TypePopup="Create">
             <BodyRenderFragment Context="item">
-                <ContactCreatePopup />
+                <ContactCreatePopup   />
             </BodyRenderFragment>
-            <FooterRenderFragment Context="item">
-                <CrudPopupFooter ClosePopup="ClosePopup" />
-            </FooterRenderFragment>
         </CrudPopup>
         break;
     case AgentFormState.ListingAndPoppingRemove:
+        <CrudPopup ItemType="string" Title="Remover" ClosePopup="ClosePopup" TypePopup="Delete">
+            <BodyRenderFragment Context="item">
+                <CrudPopupDelete Mensage="Deseja remover este contato ?" />
+            </BodyRenderFragment>
+        </CrudPopup>
         break;
 
 }

@@ -38,3 +38,4 @@ G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.genruntimeconfig.cach
 G:\Projetos\ContactManager\obj\Debug\net8.0\ref\ContactManager.dll
 G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\CRUD\CrudPopupFooter.razor.rz.scp.css
 G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\CRUD\CrudPopupHeader.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\CRUD\CrudPopupDelete.razor.rz.scp.css

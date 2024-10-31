@@ -4,7 +4,7 @@
     <div class="popup">
         <!-- Cabeçalho do popup -->
         <div class="popup-header">
-            @HeaderRenderFragment(Header)
+            <CrudPopupHeader Title="@Title" ClosePopup="ClosePopup" />
         </div>
 
         <!-- Corpo do popup -->
@@ -13,8 +13,8 @@
         </div>
 
         <!-- Rodapé do popup -->
-        <div class="popup-footer">
-            @FooterRenderFragment(Footer)
+        <div class="popup-footer">            
+            <CrudPopupFooter ClosePopup="ClosePopup" TypePopup="@TypePopup" />
         </div>
     </div>
 </div>
@@ -22,21 +22,20 @@
 @code {
 
     [Parameter]
-    public ItemType Header { get; set; }
+    public string Title { get; set; }
 
     [Parameter]
     public ItemType Body { get; set; }
 
     [Parameter]
-    public ItemType Footer { get; set; }
-
-    [Parameter]
-    public RenderFragment<ItemType> HeaderRenderFragment { get; set; }
-
-    [Parameter]
     public RenderFragment<ItemType> BodyRenderFragment { get; set; }
 
     [Parameter]
-    public RenderFragment<ItemType> FooterRenderFragment { get; set; }
+    public string TypePopup { get; set; }
+
+    [Parameter]
+    public EventCallback ClosePopup { get; set; }
+
+
 
 }
