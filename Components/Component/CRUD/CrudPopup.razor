@@ -1,0 +1,42 @@
+﻿@typeparam ItemType
+
+<div class="overlay" id="popupOverlay">
+    <div class="popup">
+        <!-- Cabeçalho do popup -->
+        <div class="popup-header">
+            @HeaderRenderFragment(Header)
+        </div>
+
+        <!-- Corpo do popup -->
+        <div class="popup-body">
+            @BodyRenderFragment(Body)
+        </div>
+
+        <!-- Rodapé do popup -->
+        <div class="popup-footer">
+            @FooterRenderFragment(Footer)
+        </div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public ItemType Header { get; set; }
+
+    [Parameter]
+    public ItemType Body { get; set; }
+
+    [Parameter]
+    public ItemType Footer { get; set; }
+
+    [Parameter]
+    public RenderFragment<ItemType> HeaderRenderFragment { get; set; }
+
+    [Parameter]
+    public RenderFragment<ItemType> BodyRenderFragment { get; set; }
+
+    [Parameter]
+    public RenderFragment<ItemType> FooterRenderFragment { get; set; }
+
+}

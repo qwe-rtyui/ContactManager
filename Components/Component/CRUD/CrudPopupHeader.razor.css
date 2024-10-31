@@ -1,0 +1,22 @@
+﻿/* Cabeçalho do popup */
+.popup-header {
+    padding: 10px;
+    background-color: #b8ff00b5;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .popup-header h2 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .popup-header .close-btn {
+        background: none;
+        border: none;
+        color: #333;
+        font-size: 28px;
+        cursor: pointer;
+    }

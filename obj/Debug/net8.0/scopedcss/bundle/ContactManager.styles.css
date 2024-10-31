@@ -112,6 +112,371 @@
 .item-center[b-ax12llzae5] {
     align-content: center;
 }
+/* _content/ContactManager/Components/Component/CRUD/CrudPopup.razor.rz.scp.css */
+/* Estilo do overlay */
+.overlay[b-d8jolyhn4t] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible; /* Inicialmente escondido */
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease;
+}
+
+/* Estilo do popup */
+.popup[b-d8jolyhn4t] {
+    background: rgb(27,27,27);
+    width: 40%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+/* Cabeçalho do popup */
+.popup-header[b-d8jolyhn4t] {
+    padding: 10px;
+    background-color: #b8ff00b5;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .popup-header h2[b-d8jolyhn4t] {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .popup-header .close-btn[b-d8jolyhn4t] {
+        background: none;
+        border: none;
+        color: #333;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+/* Corpo do popup */
+.popup-body[b-d8jolyhn4t] {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Rodapé do popup */
+.popup-footer[b-d8jolyhn4t] {
+    padding: 10px;
+    text-align: right;
+    background-color: rgb(27,27,27);
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+    .popup-footer button[b-d8jolyhn4t] {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .popup-footer .cancel-btn[b-d8jolyhn4t] {
+        background-color: #d3d3d3;
+        color: #333;
+    }
+
+    .popup-footer .save-btn[b-d8jolyhn4t] {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+/* Mostrar o popup quando a classe active é adicionada */
+.overlay.active[b-d8jolyhn4t] {
+    visibility: visible;
+    opacity: 1;
+}
+
+    .overlay.active .popup[b-d8jolyhn4t] {
+        transform: scale(1);
+    }
+/* _content/ContactManager/Components/Component/CRUD/CrudPopupFooter.razor.rz.scp.css */
+/* Rodapé do popup */
+.popup-footer[b-gc5iqo373g] {
+    padding: 10px;
+    text-align: right;
+    background-color: rgb(27,27,27);
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+    .popup-footer button[b-gc5iqo373g] {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .popup-footer .cancel-btn[b-gc5iqo373g] {
+        background-color: #d3d3d3;
+        color: #333;
+    }
+
+    .popup-footer .save-btn[b-gc5iqo373g] {
+        background-color: #4CAF50;
+        color: white;
+    }
+/* _content/ContactManager/Components/Component/CRUD/CrudPopupHeader.razor.rz.scp.css */
+/* Cabeçalho do popup */
+.popup-header[b-3yg7pas2hx] {
+    padding: 10px;
+    background-color: #b8ff00b5;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .popup-header h2[b-3yg7pas2hx] {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .popup-header .close-btn[b-3yg7pas2hx] {
+        background: none;
+        border: none;
+        color: #333;
+        font-size: 28px;
+        cursor: pointer;
+    }
+/* _content/ContactManager/Components/Component/POPUP/ContactCreatePopup.razor.rz.scp.css */
+.txt[b-jy4egu347c] {
+    color: white;
+}
+
+.edit-profile[b-jy4egu347c] {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 5px;
+}
+
+.profile-image img[b-jy4egu347c] {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+}
+
+.profile-details[b-jy4egu347c] {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group[b-jy4egu347c] {
+    margin-bottom: 20px;
+}
+
+    .form-group label[b-jy4egu347c] {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 5px;
+    }
+
+.form-control[b-jy4egu347c] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+    padding: 8px 4px;
+    font-size: 16px;
+    color: #b9b6b6;
+    transition: border-color 0.3s ease;
+}
+
+    .form-control[b-jy4egu347c]::placeholder {
+        color: #aaa;
+        opacity: 1;
+    }
+
+    .form-control:focus[b-jy4egu347c] {
+        border-bottom-color: #007bff; /* Cor da borda ao focar */
+    }
+
+button.btn-primary[b-jy4egu347c] {
+    align-self: flex-start;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: lawngreen;
+    color: rgb(27,27,27);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    button.btn-primary:hover[b-jy4egu347c] {
+        background-color: #66cc33; /* Tom mais escuro de verde */
+        transform: scale(1.05); /* Pequeno efeito de zoom ao passar o mouse */
+    }
+
+    button.btn-primary:active[b-jy4egu347c] {
+        transform: scale(0.98); /* Efeito de clique */
+    }
+/* _content/ContactManager/Components/Layout/Login.razor.rz.scp.css */
+.full-width[b-yaz1qrsawj] {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container[b-yaz1qrsawj] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(10, 10, 10); /*linear-gradient(135deg, #f8b195, #6c5b7b, #355c7d);*/
+    font-family: Arial, sans-serif;
+}
+
+.login-card[b-yaz1qrsawj] {
+    display: flex;
+    width: 800px;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.left-panel[b-yaz1qrsawj], .right-panel[b-yaz1qrsawj] {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.left-panel[b-yaz1qrsawj] {
+    background: rgb(27, 27, 27); /*linear-gradient(to top left, #ff9966, #ff5e62);*/
+}
+
+.right-panel[b-yaz1qrsawj] {
+    background: linear-gradient(to top right, #B8FF00, #008334); /*linear-gradient(to top right, #00f260, #0575e6);*/
+}
+
+.toggle-button[b-yaz1qrsawj] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+h2[b-yaz1qrsawj] {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+h3[b-yaz1qrsawj] {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.input-group[b-yaz1qrsawj] {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+    .input-group input[b-yaz1qrsawj] {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+
+.btn[b-yaz1qrsawj] {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+}
+
+.btn-create-account[b-yaz1qrsawj] {
+    background-color: #B8FF00;
+    color: #333;
+}
+    .btn-create-account:hover[b-yaz1qrsawj] {
+        background-color: #A8E000; /* Muda a cor de fundo ao passar o mouse */
+    }
+
+    .btn-create-account:active[b-yaz1qrsawj] {
+        transform: scale(0.95); /* Diminui o botão ao clicar */
+        background-color: #99D000; /* Muda a cor de fundo ao clicar */
+    }
+
+.btn-login[b-yaz1qrsawj] {
+    background-color: rgb(27, 27, 27);
+    color: white;     
+}
+
+    .btn-login:hover[b-yaz1qrsawj] {
+        background-color: rgb(50, 50, 50); /* Muda a cor de fundo ao passar o mouse */
+    }
+
+    .btn-login:active[b-yaz1qrsawj] {
+        transform: scale(0.95); /* Diminui o botão ao clicar */
+        background-color: rgb(100, 100, 100); /* Muda a cor de fundo ao clicar */
+    }
+
+.options[b-yaz1qrsawj] {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.9em;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.social-icons[b-yaz1qrsawj] {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.icon[b-yaz1qrsawj] {
+    font-size: 1.5em;
+    cursor: pointer;
+}
 /* _content/ContactManager/Components/Layout/MainLayout.razor.rz.scp.css */
 .page[b-rjjlgzxwvp] {
     position: relative;
@@ -283,10 +648,78 @@ main[b-rjjlgzxwvp] {
         /* Never collapse the sidebar for wide screens */
         display: block;
         /* Allow sidebar to scroll for tall menus */
-        height: calc(90vh - 3.5rem);
+        height: calc(89vh - 3.5rem);
         overflow-y: auto;
     }
 }
+/* _content/ContactManager/Components/Pages/ContactList.razor.rz.scp.css */
+.topH[b-7hbkfsh5rw] {
+    margin: 20px;
+}
+.topHR[b-7hbkfsh5rw] {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    /* align-content: center; */
+    align-items: flex-end;
+}
+
+.texto[b-7hbkfsh5rw] {
+    color: white;
+}
+
+.inpForm[b-7hbkfsh5rw] {
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+}
+
+.formCrud[b-7hbkfsh5rw] {
+    height: 77vh;
+    overflow-y: scroll;
+    position: unset;
+    margin: 25px;
+}
+
+    .formCrud[b-7hbkfsh5rw]::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .formCrud[b-7hbkfsh5rw]::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px;
+    }
+
+        .formCrud[b-7hbkfsh5rw]::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+.btn[b-7hbkfsh5rw] {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+}
+
+.btn-Add[b-7hbkfsh5rw] {
+    background-color: #B8FF00;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+    .btn-Add:hover[b-7hbkfsh5rw] {
+        background-color: #A8E000; /* Muda a cor de fundo ao passar o mouse */
+    }
+
+    .btn-Add:active[b-7hbkfsh5rw] {
+        transform: scale(0.95); /* Diminui o botão ao clicar */
+        background-color: #99D000; /* Muda a cor de fundo ao clicar */
+    }
 /* _content/ContactManager/Components/Pages/Home.razor.rz.scp.css */
 .topH[b-kaevorxcvj] {
     margin: 20px;

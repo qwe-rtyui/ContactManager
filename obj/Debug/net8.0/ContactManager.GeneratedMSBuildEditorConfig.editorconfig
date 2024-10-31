@@ -34,10 +34,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRcQ1JVRFxDcnVkVGFibGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Projetos/ContactManager/Components/Pages/ContactList.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb250YWN0TGlzdC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [G:/Projetos/ContactManager/Components/Pages/Setting.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTZXR0aW5nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -58,6 +54,26 @@ build_metadata.AdditionalFiles.CssScope = b-cl72mef2xz
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRcQ29udGFjdEl0ZW0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ax12llzae5
 
+[G:/Projetos/ContactManager/Components/Component/CRUD/CrudPopup.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRcQ1JVRFxDcnVkUG9wdXAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-d8jolyhn4t
+
+[G:/Projetos/ContactManager/Components/Component/CRUD/CrudPopupFooter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRcQ1JVRFxDcnVkUG9wdXBGb290ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-gc5iqo373g
+
+[G:/Projetos/ContactManager/Components/Component/CRUD/CrudPopupHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRcQ1JVRFxDcnVkUG9wdXBIZWFkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-3yg7pas2hx
+
+[G:/Projetos/ContactManager/Components/Component/POPUP/ContactCreatePopup.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRcUE9QVVBcQ29udGFjdENyZWF0ZVBvcHVwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-jy4egu347c
+
+[G:/Projetos/ContactManager/Components/Layout/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-yaz1qrsawj
+
 [G:/Projetos/ContactManager/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-rjjlgzxwvp
@@ -65,6 +81,10 @@ build_metadata.AdditionalFiles.CssScope = b-rjjlgzxwvp
 [G:/Projetos/ContactManager/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-n00fjzqmrq
+
+[G:/Projetos/ContactManager/Components/Pages/ContactList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb250YWN0TGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-7hbkfsh5rw
 
 [G:/Projetos/ContactManager/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y

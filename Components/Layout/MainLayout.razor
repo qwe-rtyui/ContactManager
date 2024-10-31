@@ -1,10 +1,11 @@
-﻿@inherits LayoutComponentBase
+﻿ @inherits LayoutComponentBase
 
 <div class="page">
+    <!-- Exibe a barra de navegação apenas se o usuário não estiver logado -->
     <div class="sidebar">
         <NavMenu />
     </div>
-    <main>     
+    <main>
         <article class="content px-4">
             @Body
         </article>

@@ -1,0 +1,26 @@
+﻿/* Rodapé do popup */
+.popup-footer {
+    padding: 10px;
+    text-align: right;
+    background-color: rgb(27,27,27);
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+    .popup-footer button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .popup-footer .cancel-btn {
+        background-color: #d3d3d3;
+        color: #333;
+    }
+
+    .popup-footer .save-btn {
+        background-color: #4CAF50;
+        color: white;
+    }

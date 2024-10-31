@@ -1,0 +1,9 @@
+﻿@rendermode InteractiveServer
+
+<button class="cancel-btn" @onclick="() => ClosePopup.InvokeAsync()">Cancelar</button>
+<button class="save-btn">Salvar</button>
+
+@code {
+    [Parameter]
+    public EventCallback ClosePopup { get; set; }
+}

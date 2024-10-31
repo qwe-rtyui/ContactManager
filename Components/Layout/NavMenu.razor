@@ -1,4 +1,6 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@inject IJSRuntime JS
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid" style="margin: 10px;">
         <ion-icon name="logo-buffer" style="color:lawngreen; font-size: 40px;"></ion-icon>
     </div>
@@ -13,24 +15,34 @@
                 <span class="bi" aria-hidden="true"><ion-icon name="person-circle-outline"></ion-icon></span>
             </NavLink>
         </div>
-
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="contactlist">
+                <span class="bi " aria-hidden="true"><ion-icon name="people-circle-outline"></ion-icon></span>
+            </NavLink>
+        </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="setting">
                 <span class="bi " aria-hidden="true"><ion-icon name="settings-outline"></ion-icon></span>
             </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi" aria-hidden="true"><ion-icon name="exit-outline"></ion-icon></span>
-            </NavLink>
-        </div>    
+        </div>       
     </nav>  
 </div>
 <div>
     <div class="container-fluid" style="margin-left: 4px;">
         <span>Logado como:</span>
         <span style="color:whitesmoke">Teste.123@gmail.com</span>
+        <div class="nav-item" style="padding: 0;">
+            <NavLink href="" @onclick="ReloadPage">
+                <span class="bi" aria-hidden="true"><ion-icon name="exit-outline"></ion-icon></span>
+            </NavLink>
+        </div>
     </div>
 </div>
 
+@code{
+
+    private async Task ReloadPage()
+    {
+        await JS.InvokeVoidAsync("eval", "location.reload()");
+    }
+}

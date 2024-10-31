@@ -88,7 +88,7 @@
         /* Never collapse the sidebar for wide screens */
         display: block;
         /* Allow sidebar to scroll for tall menus */
-        height: calc(90vh - 3.5rem);
+        height: calc(89vh - 3.5rem);
         overflow-y: auto;
     }
 }

@@ -3,6 +3,7 @@ G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.AssemblyInfoInputs.ca
 G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.AssemblyInfo.cs
 G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.csproj.CoreCompileInputs.cache
 G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.MvcApplicationPartsAssemblyInfo.cache
+G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.sourcelink.json
 G:\Projetos\ContactManager\bin\Debug\net8.0\appsettings.Development.json
 G:\Projetos\ContactManager\bin\Debug\net8.0\appsettings.json
 G:\Projetos\ContactManager\bin\Debug\net8.0\ContactManager.staticwebassets.runtime.json
@@ -18,8 +19,16 @@ G:\Projetos\ContactManager\obj\Debug\net8.0\staticwebassets\msbuild.build.Contac
 G:\Projetos\ContactManager\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ContactManager.props
 G:\Projetos\ContactManager\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ContactManager.props
 G:\Projetos\ContactManager\obj\Debug\net8.0\staticwebassets.pack.json
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\AlphabetMenu.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\ContactItem.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\CRUD\CrudPopup.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\POPUP\ContactCreatePopup.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Layout\Login.razor.rz.scp.css
 G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Pages\ContactList.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Pages\Home.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Pages\Profile.razor.rz.scp.css
 G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\bundle\ContactManager.styles.css
 G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\projectbundle\ContactManager.bundle.scp.css
 G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.dll
@@ -27,8 +36,5 @@ G:\Projetos\ContactManager\obj\Debug\net8.0\refint\ContactManager.dll
 G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.pdb
 G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.genruntimeconfig.cache
 G:\Projetos\ContactManager\obj\Debug\net8.0\ref\ContactManager.dll
-G:\Projetos\ContactManager\obj\Debug\net8.0\ContactManager.sourcelink.json
-G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Pages\Profile.razor.rz.scp.css
-G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\AlphabetMenu.razor.rz.scp.css
-G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\ContactItem.razor.rz.scp.css
-G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Pages\Home.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\CRUD\CrudPopupFooter.razor.rz.scp.css
+G:\Projetos\ContactManager\obj\Debug\net8.0\scopedcss\Components\Component\CRUD\CrudPopupHeader.razor.rz.scp.css

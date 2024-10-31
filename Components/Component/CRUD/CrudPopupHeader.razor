@@ -1,0 +1,11 @@
+﻿@rendermode InteractiveServer
+
+<h2>@Title</h2>
+<button class="close-btn" @onclick="() => ClosePopup.InvokeAsync()">×</button>
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public EventCallback ClosePopup { get; set; }
+}

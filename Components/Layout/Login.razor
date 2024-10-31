@@ -1,0 +1,57 @@
+﻿@page "/login"
+@rendermode InteractiveServer
+<PageTitle>Login</PageTitle>
+
+<div class="login-container">
+    <div class="login-card">
+        <!-- Esquerda: Novo Login -->
+        <div class="left-panel">
+            <h2>BEM VINDO</h2>
+            <h3> Novo Login</h3>
+            <button class="btn btn-create-account">Criar conta</button>
+            @* <div class="social-icons">
+                <i class="icon">📧</i>
+                <i class="icon">📱</i>
+                <i class="icon">🌐</i>
+            </div> *@
+        </div>
+
+        <!-- Direita: Fazer Login -->
+        <div class="right-panel">
+            <h2>FAÇA LOGIN</h2>
+            <div class="input-group">
+                <input type="text" placeholder="Usuário" />
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Senha" />
+            </div>
+            <div class="options">
+                <label><input type="checkbox" /> Lembrar</label>
+                <a href="#">Esqueceu senha?</a>
+            </div>
+            <button class="btn btn-login" @onclick="OnLoginClicked">Entrar</button>
+            @* <div class="social-icons">
+                <i class="icon">📘</i>
+                <i class="icon">📱</i>
+                <i class="icon">🐦</i>
+                <i class="icon">🎵</i>
+            </div> *@
+        </div>
+
+        <!-- Botão de alternância -->
+        <div class="toggle-button">
+            <span>⇆</span>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public EventCallback LoggedIn { get; set; }
+
+    private async Task OnLoginClicked()
+    {
+        // Simula o processo de login
+        await LoggedIn.InvokeAsync();
+    }
+
+}

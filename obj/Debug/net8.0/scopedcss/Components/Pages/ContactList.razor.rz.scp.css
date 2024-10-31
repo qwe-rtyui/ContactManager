@@ -1,0 +1,67 @@
+.topH[b-7hbkfsh5rw] {
+    margin: 20px;
+}
+.topHR[b-7hbkfsh5rw] {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    /* align-content: center; */
+    align-items: flex-end;
+}
+
+.texto[b-7hbkfsh5rw] {
+    color: white;
+}
+
+.inpForm[b-7hbkfsh5rw] {
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+}
+
+.formCrud[b-7hbkfsh5rw] {
+    height: 77vh;
+    overflow-y: scroll;
+    position: unset;
+    margin: 25px;
+}
+
+    .formCrud[b-7hbkfsh5rw]::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .formCrud[b-7hbkfsh5rw]::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px;
+    }
+
+        .formCrud[b-7hbkfsh5rw]::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+.btn[b-7hbkfsh5rw] {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+}
+
+.btn-Add[b-7hbkfsh5rw] {
+    background-color: #B8FF00;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+    .btn-Add:hover[b-7hbkfsh5rw] {
+        background-color: #A8E000; /* Muda a cor de fundo ao passar o mouse */
+    }
+
+    .btn-Add:active[b-7hbkfsh5rw] {
+        transform: scale(0.95); /* Diminui o botão ao clicar */
+        background-color: #99D000; /* Muda a cor de fundo ao clicar */
+    }

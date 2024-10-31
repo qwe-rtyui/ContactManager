@@ -1,6 +1,35 @@
-﻿<Router AppAssembly="typeof(Program).Assembly">
-    <Found Context="routeData">
-        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
-        <FocusOnNavigate RouteData="routeData" Selector="h1" />
-    </Found>
-</Router>
+﻿@using ContactManager.Components.Layout
+@rendermode InteractiveServer
+@if (IsLoggedIn)
+{
+    <Router AppAssembly="typeof(Program).Assembly">
+        <Found Context="routeData">
+            <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+            <FocusOnNavigate RouteData="routeData" Selector="h1" />
+        </Found>
+        <NotFound>
+            <PageTitle>Not Found</PageTitle>
+            <h1>Sorry, there's nothing at this address.</h1>
+        </NotFound>
+    </Router>
+}
+else
+{
+    <Login LoggedIn="CheckIfUserIsLoggedIn"></Login>
+}
+
+
+
+
+
+@code {
+    public bool IsLoggedIn { get; set; } = false;
+
+    private void CheckIfUserIsLoggedIn()
+    {
+        Console.WriteLine("execultou");
+        IsLoggedIn = true;
+        StateHasChanged(); // Atualiza o estado do layout após o login
+
+    }
+}

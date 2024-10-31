@@ -1,0 +1,48 @@
+﻿@rendermode InteractiveServer
+
+<div class="row edit-profile">
+    <div class="profile-details col-6">
+        <div class="form-group">
+            <label class="txt">Nome:</label>
+            <input type="text" class="form-control" @bind="UserProfile.Name" placeholder="Nome" />
+        </div>
+
+        <div class="form-group">
+            <label class="txt">Telefone:</label>
+            <input type="text" class="form-control" @bind="UserProfile.Phone" placeholder="Telefone" />
+        </div>
+
+        <div class="form-group">
+            <label class="txt">Email:</label>
+            <input type="email" class="form-control" @bind="UserProfile.Email" placeholder="Email" />
+        </div>
+    </div>
+</div>
+
+@code {
+    private UserProfileModel UserProfile = new UserProfileModel();
+
+    // Método para carregar a imagem
+    private void OnImageChange(ChangeEventArgs e)
+    {
+        // var file = ((Microsoft.AspNetCore.Components.Forms.InputFileChangeEventArgs)e).File;
+        // if (file != null)
+        // {
+        //     // Lógica para salvar a imagem no servidor ou converter para URL local
+        //     // Neste exemplo, estamos apenas usando uma URL fixa para simplificar
+        //     profileImageUrl = "URL_DA_IMAGEM_CARREGADA"; // Substitua com a lógica correta
+        // }
+    }
+
+    
+}
+
+@code {
+    public class UserProfileModel
+    {
+        public string Name { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+    }
+}
+
