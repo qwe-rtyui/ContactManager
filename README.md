@@ -1,7 +1,7 @@
 # ContactManager
 Um painel intuitivo para gerenciar contatos de forma eficiente! Ideal para empresas, freelancers, ou qualquer um que precise de um sistema centralizado para armazenar e organizar informações de contato, como funcionários, usuários, ou clientes.
 
-<h1>✨ Funcionalidades</h1>
+<h2>✨ Funcionalidades</h2>
 Autenticação: Tela de login segura para controlar o acesso ao painel.
 Cadastro de Contatos: Adicione novos contatos de maneira rápida e fácil.
 Gerenciamento de Contatos: Edite, visualize e organize contatos já cadastrados.
