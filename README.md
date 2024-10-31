@@ -2,15 +2,15 @@
 Um painel intuitivo para gerenciar contatos.
 
 <h2>✨ Funcionalidades</h2>
-Autenticação: 
-Cadastro de Contatos:
-Gerenciamento de Contatos:
-Interface Flexível:
+<h3>Autenticação: </h3>
+<h3>Cadastro de Contatos:</h3>
+<h3>Gerenciamento de Contatos:</h3>
+<h3>Interface Flexível:</h3>
 
 <h2>🚀 Tecnologias Utilizadas </h2>
-Backend: .NET 8.
-Frontend: CSS, HTML, Blazor.
-Banco de Dados: 
+<h3>Backend: .NET 8.</h3>
+<h3>Frontend: CSS, HTML, Blazor.</h3>
+<h3>Banco de Dados: </h3>
 
 <h2>📸 Capturas de Tela</h2>
 
@@ -21,8 +21,8 @@ Banco de Dados:
 </div>
 
 <h2>⚙️ Configuração</h2>
-Variáveis de Ambiente:
-Conexão com o Banco de Dados:
+<h3>Variáveis de Ambiente:</h3>
+<h3>Conexão com o Banco de Dados:</h3>
 
 <h2>📄 Licença</h2>
 
